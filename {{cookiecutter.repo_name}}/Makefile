@@ -19,7 +19,8 @@ help:
 	echo '  * uninstall: removes the development package from pip.'
 	echo '  * test: runs py.test.'
 	echo '  * test-slow: runs py.test, including slow tests.'
-	echo '  * lint: runs pylint.'
+	echo '  * lint: runs pylama.'
+	echo '  * format: runs black.'
 	echo '  * html: builds the HTML documentation.'
 	echo '  * pdf: builds the documentation in PDF format.'
 	echo '  * latex: builds LaTeX source, used to generate other formats.'
@@ -31,10 +32,6 @@ help:
 .PHONY: test
 test:
 	py.test
-
-.PHONY: test-slow
-test-slow:
-	py.test --runslow
 
 .PHONY: clean
 clean:
@@ -72,7 +69,11 @@ sitepkg-develop: develop
 
 .PHONY: lint
 lint:
-	pylint ./$(PACKAGE_NAME)/
+	pylama ./$(PACKAGE_NAME)/
+
+.PHONY: format
+lint:
+	black ./$(PACKAGE_NAME)/
 
 .PHONY: sdist
 sdist:

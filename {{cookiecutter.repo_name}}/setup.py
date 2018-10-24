@@ -105,14 +105,15 @@ setup(
             'check-manifest',
             'ipython',
             'ipdb',
-            'pylint',
+            'pylama',
+            'black',
             'sphinx',
             'sphinx_rtd_theme',
             'wheel',
         ],
         'test': [
             {%if cookiecutter.enable_coverage%}'coverage',{%endif%}
-            'pylint',
+            'pylama',
             'pytest',
             {%if cookiecutter.enable_coverage%}'pytest-cov',{%endif%}
             'pytest-sugar',
