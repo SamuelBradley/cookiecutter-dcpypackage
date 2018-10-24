@@ -19,7 +19,8 @@ Features:
       any key to re-run tests, or ctrl-c to quit. Takes two arguments: the max
       number of loops, and the optional word 'slow' to indicate that slow tests
       should be included.
-* [pylint](http://docs.pylint.org), with tests excluded by default.
+* [pylama](https://pylama.readthedocs.io/), with tests excluded by default.
+* [black](https://github.com/ambv/black), for consistent formating 
 * [sphinx](http://sphinx-doc.org/index.html) documentation, with shared files between Sphinx and the Python package files, for reduced maintenance.
 * [bumpversion](https://pypi.python.org/pypi/bumpversion) for version management
 * Universal build, targetting Python 2 and 3.
@@ -45,7 +46,7 @@ Usage
 Install cookiecutter if you haven't already. Then, create a project in
 your current working directory using:
 
-    $ cookiecutter gh:DC23/cookiecutter-dcpypackage
+    $ cookiecutter gh:SamuelBradley/cookiecutter-dcpypackage
 
 Once your project is created, the next steps should be to create a
 virtual environment (using either virtualenv/virtualenvwrapper or the
